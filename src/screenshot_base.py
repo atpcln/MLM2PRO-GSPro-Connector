@@ -89,6 +89,17 @@ class ScreenshotBase(ViewBox):
             BallData.properties[BallMetrics.CLUB_PATH] = 'Club path'
             BallData.properties[BallMetrics.CLUB_FACE_TO_TARGET] = 'Face to target'
             BallData.properties[BallMetrics.CLUB_FACE_TO_PATH] = 'Face to path'
+        elif self.settings.device_id ==  LaunchMonitor.SQUARE :
+            rois_properties = BallData.rois_square_properties
+            BallData.properties[BallMetrics.HLA] = "Direction eller Offline"
+            BallData.properties[BallMetrics.VLA] = "Angle"
+            BallData.properties[BallMetrics.CLUB_PATH] = "Path"
+            BallData.properties[BallMetrics.ANGLE_OF_ATTACK] = "Attack Ang"
+            BallData.properties[BallMetrics.CLUB_FACE_TO_TARGET] = 'Face to TGT'
+            BallData.properties[BallMetrics.SPIN_AXIS] = 'Spin Axis'
+            BallData.properties[BallMetrics.BACK_SPIN] = 'Spin Rate'
+            BallData.properties[BallMetrics.SIDE_SPIN] = 'Side Spin'
+        
         else : # defaults
             rois_properties = BallData.rois_properties
             BallData.properties[BallMetrics.HLA] = "Launch Direction (HLA)"

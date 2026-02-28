@@ -81,6 +81,16 @@ class BallData:
                        BallMetrics.CLUB_SPEED,
                        BallMetrics.ANGLE_OF_ATTACK,
                        BallMetrics.CLUB_PATH
+    ]
+    rois_square_properties = [BallMetrics.SPEED,
+                       BallMetrics.SPIN_AXIS,
+                       BallMetrics.HLA,
+                       BallMetrics.VLA,
+                       BallMetrics.BACK_SPIN,
+                       BallMetrics.SIDE_SPIN,
+                       BallMetrics.ANGLE_OF_ATTACK,
+                       BallMetrics.CLUB_FACE_TO_TARGET,
+                       BallMetrics.CLUB_PATH
                        ]
     rois_mevoplus_properties = [BallMetrics.SPEED,
                        BallMetrics.TOTAL_SPIN,
@@ -159,7 +169,7 @@ class BallData:
                 "HLA": self.hla,
                 "VLA": self.vla,
                 "Backspin": self.back_spin,
-                "SideSpin": self.side_spin,
+                "SideSpin": self.side_spin, 
                 "CarryDistance": 0
             },
             "ClubData": {
